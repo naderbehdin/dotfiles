@@ -2,4 +2,18 @@
 --  I promise not to create any merge conflicts in this directory :)
 --
 -- See the kickstart.nvim README for more information
-return {}
+return {
+  {
+    'FabijanZulj/blame.nvim',
+    lazy = false,
+    config = function()
+      require('blame').setup {}
+    end,
+  },
+  {
+    'tzachar/local-highlight.nvim',
+    config = function()
+      require('local-highlight').setup()
+    end,
+  },
+}
